@@ -1,0 +1,111 @@
+/* src/pages/Dashboard.css */
+
+.dashboard {
+  max-width: 1440px;
+  margin: 40px auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #0f172a;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+header button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6edf3;
+  background: white;
+  cursor: pointer;
+}
+
+/* Stats grid */
+.stats {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+/* 1 column on small screens, 3 columns on >= 768px */
+@media (min-width: 768px) {
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card base */
+.card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Card headings and values */
+.card h3 {
+  margin: 0 0 8px 0;
+  font-size: 0.95rem;
+  color: #334155;
+  font-weight: 600;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Color variants according to status rules */
+.card.green { border-left: 6px solid #16a34a; } /* open → green tone */
+.card.amber { border-left: 6px solid #e5982b; } /* in_progress → amber tone */
+.card.gray { border-left: 6px solid #6b7280; }  /* closed → gray tone */
+
+/* Manage button */
+.manage-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Small screens adjustments */
+@media (max-width: 767px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .manage-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Accessibility: focus states */
+header button:focus,
+.manage-btn:focus {
+  outline: 3px solid rgba(37, 99, 235, 0.25);
+  outline-offset: 2px;
+}

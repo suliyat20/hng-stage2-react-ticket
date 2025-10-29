@@ -1,0 +1,58 @@
+.landing {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: #eef2ff;
+  padding: 100px 20px 0;
+  min-height: 80vh;
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.circle {
+  position: absolute;
+  z-index: 1;
+}
+
+.circle1 {
+  top: 40px;
+  left: 50px;
+}
+
+.circle2 {
+  bottom: 150px;
+  right: 80px;
+}
+
+.wave {
+  width: 100%;
+  display: block;
+  margin-top: 50px;
+}
+
+.buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #4f46e5;
+  color: #fff;
+}
+
+.btn-secondary {
+  border: 2px solid #4f46e5;
+  color: #4f46e5;
+}
